@@ -39,8 +39,8 @@ namespace VeriTabanıProje
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(kullaniciAdi.Text) == true  || string.IsNullOrEmpty(kullaniciTelefon.Text) == true
-                || string.IsNullOrEmpty(kullaniciEmail.Text) == true 
+            if (string.IsNullOrEmpty(musteri_adsoyad.Text) == true  || string.IsNullOrEmpty(musteri_tel.Text) == true
+                || string.IsNullOrEmpty(musteri_mail.Text) == true 
                 || string.IsNullOrEmpty(il.Text) == true || string.IsNullOrEmpty(ilce.Text) == true
                 || string.IsNullOrEmpty(mahalle.Text) == true || string.IsNullOrEmpty(sokak.Text) == true
                 || string.IsNullOrEmpty(no.Text) == true)
@@ -53,13 +53,33 @@ namespace VeriTabanıProje
                 {
                     if (baglanti.State == ConnectionState.Closed)
                         baglanti.Open();
-                    string kayit = "insert into Musteri(muster_adsoyad,kullaniciSoyadi,musteritel,musteri_mail) values (@kullaniciAdi,@kullaniciTelefon,@kullaniciEmail)";
+                    string kayit = "insert into Musteri(musteri_adsoyad,musteri_tel,musteri_mail) values (@musteri_adsoyad,@musteri_tel,@musteri_mail)";
                     SqlCommand komut = new SqlCommand(kayit, baglanti);
-                    komut.Parameters.AddWithValue("@kullaniciAdi", kullaniciAdi.Text);                
-                    komut.Parameters.AddWithValue("@kullaniciTelefon", kullaniciTelefon.Text);
-                    komut.Parameters.AddWithValue("@kullaniciEmail", kullaniciEmail.Text);                
+                    komut.Parameters.AddWithValue("@musteri_adsoyad", musteri_adsoyad.Text);                
+                    komut.Parameters.AddWithValue("@musteri_tel", musteri_tel.Text);
+                    komut.Parameters.AddWithValue("@musteri_mail", musteri_mail.Text);                
                     komut.ExecuteNonQuery();
-                    baglanti.Close();               
+                    baglanti.Close();
+                    try
+                    {
+                        if (baglanti.State == ConnectionState.Closed)
+                            baglanti.Open();
+                        string kayitt = "insert into Adress(il,ilce,mahalle,sokak,no,daire) values (@il,@ilce,@mahalle,@sokak,@no,@daire)";
+                        SqlCommand komutt = new SqlCommand(kayitt, baglanti);
+                        komut.Parameters.AddWithValue("@il", il.Text);
+                        komut.Parameters.AddWithValue("@ilce", ilce.Text);
+                        komut.Parameters.AddWithValue("@mahalle", mahalle.Text);
+                        komut.Parameters.AddWithValue("@sokak", sokak.Text);
+                        komut.Parameters.AddWithValue("@no", no.Text);
+                        komut.Parameters.AddWithValue("@daire", daire.Text);
+                        komut.ExecuteNonQuery();
+                        baglanti.Close();
+                        MessageBox.Show("Adres Kaydı Başarılı !");
+                    }
+                    catch (Exception hata)
+                    {
+                        MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
+                    }
                     MessageBox.Show("Müşteri Kaydı Başarılı !");
                 }
                 catch (Exception hata)
@@ -122,8 +142,8 @@ namespace VeriTabanıProje
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(kullaniciAdi.Text) == true || string.IsNullOrEmpty(kullaniciTelefon.Text) == true
-               || string.IsNullOrEmpty(kullaniciEmail.Text) == true
+            if (string.IsNullOrEmpty(musteri_adsoyad.Text) == true || string.IsNullOrEmpty(musteri_tel.Text) == true
+               || string.IsNullOrEmpty(musteri_mail.Text) == true
                || string.IsNullOrEmpty(il.Text) == true || string.IsNullOrEmpty(ilce.Text) == true
                || string.IsNullOrEmpty(mahalle.Text) == true || string.IsNullOrEmpty(sokak.Text) == true
                || string.IsNullOrEmpty(no.Text) == true)

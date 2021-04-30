@@ -29,9 +29,9 @@ namespace VeriTabanıProje
         /// </summary>
         private void InitializeComponent()
         {
-            this.kullaniciEmail = new System.Windows.Forms.TextBox();
-            this.kullaniciTelefon = new System.Windows.Forms.TextBox();
-            this.kullaniciAdi = new System.Windows.Forms.TextBox();
+            this.musteri_mail = new System.Windows.Forms.TextBox();
+            this.musteri_tel = new System.Windows.Forms.TextBox();
+            this.musteri_adsoyad = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,29 +56,29 @@ namespace VeriTabanıProje
             this.daire = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // kullaniciEmail
+            // musteri_mail
             // 
-            this.kullaniciEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.kullaniciEmail.Location = new System.Drawing.Point(328, 94);
-            this.kullaniciEmail.Name = "kullaniciEmail";
-            this.kullaniciEmail.Size = new System.Drawing.Size(152, 22);
-            this.kullaniciEmail.TabIndex = 32;
+            this.musteri_mail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musteri_mail.Location = new System.Drawing.Point(328, 94);
+            this.musteri_mail.Name = "musteri_mail";
+            this.musteri_mail.Size = new System.Drawing.Size(152, 22);
+            this.musteri_mail.TabIndex = 32;
             // 
-            // kullaniciTelefon
+            // musteri_tel
             // 
-            this.kullaniciTelefon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.kullaniciTelefon.Location = new System.Drawing.Point(328, 60);
-            this.kullaniciTelefon.Name = "kullaniciTelefon";
-            this.kullaniciTelefon.Size = new System.Drawing.Size(152, 22);
-            this.kullaniciTelefon.TabIndex = 31;
+            this.musteri_tel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musteri_tel.Location = new System.Drawing.Point(328, 60);
+            this.musteri_tel.Name = "musteri_tel";
+            this.musteri_tel.Size = new System.Drawing.Size(152, 22);
+            this.musteri_tel.TabIndex = 31;
             // 
-            // kullaniciAdi
+            // musteri_adsoyad
             // 
-            this.kullaniciAdi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.kullaniciAdi.Location = new System.Drawing.Point(328, 30);
-            this.kullaniciAdi.Name = "kullaniciAdi";
-            this.kullaniciAdi.Size = new System.Drawing.Size(152, 22);
-            this.kullaniciAdi.TabIndex = 29;
+            this.musteri_adsoyad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musteri_adsoyad.Location = new System.Drawing.Point(328, 30);
+            this.musteri_adsoyad.Name = "musteri_adsoyad";
+            this.musteri_adsoyad.Size = new System.Drawing.Size(152, 22);
+            this.musteri_adsoyad.TabIndex = 29;
             // 
             // button1
             // 
@@ -319,9 +319,9 @@ namespace VeriTabanıProje
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.kullaniciEmail);
-            this.Controls.Add(this.kullaniciTelefon);
-            this.Controls.Add(this.kullaniciAdi);
+            this.Controls.Add(this.musteri_mail);
+            this.Controls.Add(this.musteri_tel);
+            this.Controls.Add(this.musteri_adsoyad);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -337,9 +337,9 @@ namespace VeriTabanıProje
         }
 
         #endregion
-        private System.Windows.Forms.TextBox kullaniciEmail;
-        private System.Windows.Forms.TextBox kullaniciTelefon;
-        private System.Windows.Forms.TextBox kullaniciAdi;
+        private System.Windows.Forms.TextBox musteri_mail;
+        private System.Windows.Forms.TextBox musteri_tel;
+        private System.Windows.Forms.TextBox musteri_adsoyad;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
