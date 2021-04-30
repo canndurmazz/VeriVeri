@@ -29,9 +29,9 @@ namespace VeriTabanıProje
         /// </summary>
         private void InitializeComponent()
         {
-            this.musteri_mail = new System.Windows.Forms.TextBox();
-            this.musteri_tel = new System.Windows.Forms.TextBox();
-            this.musteri_adsoyad = new System.Windows.Forms.TextBox();
+            this.kullaniciEmail = new System.Windows.Forms.TextBox();
+            this.kullaniciTelefon = new System.Windows.Forms.TextBox();
+            this.kullaniciAdi = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,31 +54,33 @@ namespace VeriTabanıProje
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.daire = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.adresid = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // musteri_mail
+            // kullaniciEmail
             // 
-            this.musteri_mail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.musteri_mail.Location = new System.Drawing.Point(328, 94);
-            this.musteri_mail.Name = "musteri_mail";
-            this.musteri_mail.Size = new System.Drawing.Size(152, 22);
-            this.musteri_mail.TabIndex = 32;
+            this.kullaniciEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.kullaniciEmail.Location = new System.Drawing.Point(328, 94);
+            this.kullaniciEmail.Name = "kullaniciEmail";
+            this.kullaniciEmail.Size = new System.Drawing.Size(152, 22);
+            this.kullaniciEmail.TabIndex = 2;
             // 
-            // musteri_tel
+            // kullaniciTelefon
             // 
-            this.musteri_tel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.musteri_tel.Location = new System.Drawing.Point(328, 60);
-            this.musteri_tel.Name = "musteri_tel";
-            this.musteri_tel.Size = new System.Drawing.Size(152, 22);
-            this.musteri_tel.TabIndex = 31;
+            this.kullaniciTelefon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.kullaniciTelefon.Location = new System.Drawing.Point(328, 60);
+            this.kullaniciTelefon.Name = "kullaniciTelefon";
+            this.kullaniciTelefon.Size = new System.Drawing.Size(152, 22);
+            this.kullaniciTelefon.TabIndex = 1;
             // 
-            // musteri_adsoyad
+            // kullaniciAdi
             // 
-            this.musteri_adsoyad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.musteri_adsoyad.Location = new System.Drawing.Point(328, 30);
-            this.musteri_adsoyad.Name = "musteri_adsoyad";
-            this.musteri_adsoyad.Size = new System.Drawing.Size(152, 22);
-            this.musteri_adsoyad.TabIndex = 29;
+            this.kullaniciAdi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.kullaniciAdi.Location = new System.Drawing.Point(328, 30);
+            this.kullaniciAdi.Name = "kullaniciAdi";
+            this.kullaniciAdi.Size = new System.Drawing.Size(152, 22);
+            this.kullaniciAdi.TabIndex = 0;
             // 
             // button1
             // 
@@ -87,7 +89,7 @@ namespace VeriTabanıProje
             this.button1.Location = new System.Drawing.Point(328, 125);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 28);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Bilgileri Kaydet";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -125,11 +127,11 @@ namespace VeriTabanıProje
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(639, 0);
+            this.label8.Location = new System.Drawing.Point(650, 1);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 20);
+            this.label8.Size = new System.Drawing.Size(24, 24);
             this.label8.TabIndex = 38;
             this.label8.Text = "X";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -166,45 +168,45 @@ namespace VeriTabanıProje
             // 
             // il
             // 
-            this.il.Location = new System.Drawing.Point(157, 195);
+            this.il.Location = new System.Drawing.Point(157, 225);
             this.il.Name = "il";
             this.il.Size = new System.Drawing.Size(100, 22);
-            this.il.TabIndex = 43;
+            this.il.TabIndex = 3;
             // 
             // ilce
             // 
-            this.ilce.Location = new System.Drawing.Point(157, 223);
+            this.ilce.Location = new System.Drawing.Point(157, 253);
             this.ilce.Name = "ilce";
             this.ilce.Size = new System.Drawing.Size(100, 22);
-            this.ilce.TabIndex = 44;
+            this.ilce.TabIndex = 4;
             this.ilce.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // mahalle
             // 
-            this.mahalle.Location = new System.Drawing.Point(157, 251);
+            this.mahalle.Location = new System.Drawing.Point(157, 281);
             this.mahalle.Name = "mahalle";
             this.mahalle.Size = new System.Drawing.Size(100, 22);
-            this.mahalle.TabIndex = 45;
+            this.mahalle.TabIndex = 5;
             // 
             // no
             // 
-            this.no.Location = new System.Drawing.Point(526, 223);
+            this.no.Location = new System.Drawing.Point(526, 238);
             this.no.Name = "no";
             this.no.Size = new System.Drawing.Size(100, 22);
-            this.no.TabIndex = 47;
+            this.no.TabIndex = 7;
             // 
             // sokak
             // 
-            this.sokak.Location = new System.Drawing.Point(526, 195);
+            this.sokak.Location = new System.Drawing.Point(526, 210);
             this.sokak.Name = "sokak";
             this.sokak.Size = new System.Drawing.Size(100, 22);
-            this.sokak.TabIndex = 48;
+            this.sokak.TabIndex = 6;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(24, 200);
+            this.label13.Location = new System.Drawing.Point(24, 230);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(22, 17);
             this.label13.TabIndex = 50;
@@ -215,7 +217,7 @@ namespace VeriTabanıProje
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label14.Location = new System.Drawing.Point(24, 228);
+            this.label14.Location = new System.Drawing.Point(24, 258);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 17);
             this.label14.TabIndex = 51;
@@ -226,7 +228,7 @@ namespace VeriTabanıProje
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label15.Location = new System.Drawing.Point(24, 256);
+            this.label15.Location = new System.Drawing.Point(24, 286);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 17);
             this.label15.TabIndex = 52;
@@ -237,7 +239,7 @@ namespace VeriTabanıProje
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label17.Location = new System.Drawing.Point(393, 195);
+            this.label17.Location = new System.Drawing.Point(393, 210);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(55, 17);
             this.label17.TabIndex = 54;
@@ -248,7 +250,7 @@ namespace VeriTabanıProje
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label18.Location = new System.Drawing.Point(393, 226);
+            this.label18.Location = new System.Drawing.Point(393, 241);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(34, 17);
             this.label18.TabIndex = 55;
@@ -259,7 +261,7 @@ namespace VeriTabanıProje
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(474, 279);
+            this.button2.Location = new System.Drawing.Point(474, 304);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 28);
             this.button2.TabIndex = 56;
@@ -282,7 +284,7 @@ namespace VeriTabanıProje
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(393, 256);
+            this.label1.Location = new System.Drawing.Point(393, 271);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 59;
@@ -290,17 +292,36 @@ namespace VeriTabanıProje
             // 
             // daire
             // 
-            this.daire.Location = new System.Drawing.Point(526, 251);
+            this.daire.Location = new System.Drawing.Point(526, 266);
             this.daire.Name = "daire";
             this.daire.Size = new System.Drawing.Size(100, 22);
-            this.daire.TabIndex = 58;
+            this.daire.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(24, 198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Adres ID :";
+            // 
+            // adresid
+            // 
+            this.adresid.Location = new System.Drawing.Point(157, 195);
+            this.adresid.Name = "adresid";
+            this.adresid.Size = new System.Drawing.Size(100, 22);
+            this.adresid.TabIndex = 60;
             // 
             // yenimüsteri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(665, 318);
+            this.ClientSize = new System.Drawing.Size(677, 344);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.adresid);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.daire);
             this.Controls.Add(this.label6);
@@ -319,9 +340,9 @@ namespace VeriTabanıProje
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.musteri_mail);
-            this.Controls.Add(this.musteri_tel);
-            this.Controls.Add(this.musteri_adsoyad);
+            this.Controls.Add(this.kullaniciEmail);
+            this.Controls.Add(this.kullaniciTelefon);
+            this.Controls.Add(this.kullaniciAdi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -337,9 +358,9 @@ namespace VeriTabanıProje
         }
 
         #endregion
-        private System.Windows.Forms.TextBox musteri_mail;
-        private System.Windows.Forms.TextBox musteri_tel;
-        private System.Windows.Forms.TextBox musteri_adsoyad;
+        private System.Windows.Forms.TextBox kullaniciEmail;
+        private System.Windows.Forms.TextBox kullaniciTelefon;
+        private System.Windows.Forms.TextBox kullaniciAdi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -362,5 +383,7 @@ namespace VeriTabanıProje
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox daire;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox adresid;
     }
 }

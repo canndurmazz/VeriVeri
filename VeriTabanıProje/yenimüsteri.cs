@@ -20,7 +20,7 @@ namespace VeriTabanıProje
         {
             InitializeComponent();
         }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -39,8 +39,8 @@ namespace VeriTabanıProje
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(musteri_adsoyad.Text) == true  || string.IsNullOrEmpty(musteri_tel.Text) == true
-                || string.IsNullOrEmpty(musteri_mail.Text) == true 
+            if (string.IsNullOrEmpty(kullaniciAdi.Text) == true  || string.IsNullOrEmpty(kullaniciTelefon.Text) == true
+                || string.IsNullOrEmpty(kullaniciEmail.Text) == true 
                 || string.IsNullOrEmpty(il.Text) == true || string.IsNullOrEmpty(ilce.Text) == true
                 || string.IsNullOrEmpty(mahalle.Text) == true || string.IsNullOrEmpty(sokak.Text) == true
                 || string.IsNullOrEmpty(no.Text) == true)
@@ -55,11 +55,12 @@ namespace VeriTabanıProje
                         baglanti.Open();
                     string kayit = "insert into Musteri(musteri_adsoyad,musteri_tel,musteri_mail) values (@musteri_adsoyad,@musteri_tel,@musteri_mail)";
                     SqlCommand komut = new SqlCommand(kayit, baglanti);
-                    komut.Parameters.AddWithValue("@musteri_adsoyad", musteri_adsoyad.Text);                
-                    komut.Parameters.AddWithValue("@musteri_tel", musteri_tel.Text);
-                    komut.Parameters.AddWithValue("@musteri_mail", musteri_mail.Text);                
+                    komut.Parameters.AddWithValue("@musteri_adsoyad", kullaniciAdi.Text);                
+                    komut.Parameters.AddWithValue("@musteri_tel", kullaniciTelefon.Text);
+                    komut.Parameters.AddWithValue("@musteri_mail", kullaniciEmail.Text);                
                     komut.ExecuteNonQuery();
                     baglanti.Close();
+                  
                     try
                     {
                         if (baglanti.State == ConnectionState.Closed)
@@ -142,8 +143,8 @@ namespace VeriTabanıProje
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(musteri_adsoyad.Text) == true || string.IsNullOrEmpty(musteri_tel.Text) == true
-               || string.IsNullOrEmpty(musteri_mail.Text) == true
+            if (string.IsNullOrEmpty(kullaniciAdi.Text) == true || string.IsNullOrEmpty(kullaniciTelefon.Text) == true
+               || string.IsNullOrEmpty(kullaniciEmail.Text) == true
                || string.IsNullOrEmpty(il.Text) == true || string.IsNullOrEmpty(ilce.Text) == true
                || string.IsNullOrEmpty(mahalle.Text) == true || string.IsNullOrEmpty(sokak.Text) == true
                || string.IsNullOrEmpty(no.Text) == true)
