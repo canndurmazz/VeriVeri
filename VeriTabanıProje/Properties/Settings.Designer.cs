@@ -32,5 +32,15 @@ namespace VeriTabanıProje.Properties {
                 return ((string)(this["fabrikadbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CANPC\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=True")]
+        public string fabrikavtConnectionString {
+            get {
+                return ((string)(this["fabrikavtConnectionString"]));
+            }
+        }
     }
 }

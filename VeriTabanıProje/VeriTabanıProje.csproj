@@ -63,6 +63,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="fabrikavtDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="kmc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +217,28 @@
     </None>
     <None Include="fabrikadbDataSet.xss">
       <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet.xsc">
+      <DependentUpon>fabrikavtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet.xss">
+      <DependentUpon>fabrikavtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet1.xsc">
+      <DependentUpon>fabrikavtDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet1.xss">
+      <DependentUpon>fabrikavtDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

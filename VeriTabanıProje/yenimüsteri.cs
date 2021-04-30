@@ -40,10 +40,9 @@ namespace VeriTabanıProje
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(kullaniciAdi.Text) == true  || string.IsNullOrEmpty(kullaniciTelefon.Text) == true
-                || string.IsNullOrEmpty(kullaniciEmail.Text) == true 
-                || string.IsNullOrEmpty(il.Text) == true || string.IsNullOrEmpty(ilce.Text) == true
-                || string.IsNullOrEmpty(mahalle.Text) == true || string.IsNullOrEmpty(sokak.Text) == true
-                || string.IsNullOrEmpty(no.Text) == true)
+                || string.IsNullOrEmpty(kullaniciEmail.Text) == true || string.IsNullOrEmpty(il.Text) == true || string.IsNullOrEmpty(ilce.Text) == true
+               || string.IsNullOrEmpty(mahalle.Text) == true || string.IsNullOrEmpty(sokak.Text) == true
+               || string.IsNullOrEmpty(no.Text) == true)
             {
                 MessageBox.Show("Bu Alanlar Boş Bırakılamaz", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -53,34 +52,15 @@ namespace VeriTabanıProje
                 {
                     if (baglanti.State == ConnectionState.Closed)
                         baglanti.Open();
-                    string kayit = "insert into Musteri(musteri_adsoyad,musteri_tel,musteri_mail) values (@musteri_adsoyad,@musteri_tel,@musteri_mail)";
+                    string kayit = "insert into Musteri(musteri_id,musteri_adsoyad,musteri_tel,musteri_mail,adres_id) values (@musteri_id,@musteri_adsoyad,@musteri_tel,@musteri_mail,@adres_id)";
                     SqlCommand komut = new SqlCommand(kayit, baglanti);
+                    komut.Parameters.AddWithValue("@musteri_id", musteriid.Text);
                     komut.Parameters.AddWithValue("@musteri_adsoyad", kullaniciAdi.Text);                
                     komut.Parameters.AddWithValue("@musteri_tel", kullaniciTelefon.Text);
-                    komut.Parameters.AddWithValue("@musteri_mail", kullaniciEmail.Text);                
+                    komut.Parameters.AddWithValue("@musteri_mail", kullaniciEmail.Text);
+                    komut.Parameters.AddWithValue("@adres_id", adresid.Text);
                     komut.ExecuteNonQuery();
-                    baglanti.Close();
-                  
-                    try
-                    {
-                        if (baglanti.State == ConnectionState.Closed)
-                            baglanti.Open();
-                        string kayitt = "insert into Adress(il,ilce,mahalle,sokak,no,daire) values (@il,@ilce,@mahalle,@sokak,@no,@daire)";
-                        SqlCommand komutt = new SqlCommand(kayitt, baglanti);
-                        komut.Parameters.AddWithValue("@il", il.Text);
-                        komut.Parameters.AddWithValue("@ilce", ilce.Text);
-                        komut.Parameters.AddWithValue("@mahalle", mahalle.Text);
-                        komut.Parameters.AddWithValue("@sokak", sokak.Text);
-                        komut.Parameters.AddWithValue("@no", no.Text);
-                        komut.Parameters.AddWithValue("@daire", daire.Text);
-                        komut.ExecuteNonQuery();
-                        baglanti.Close();
-                        MessageBox.Show("Adres Kaydı Başarılı !");
-                    }
-                    catch (Exception hata)
-                    {
-                        MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
-                    }
+                    baglanti.Close();                                    
                     MessageBox.Show("Müşteri Kaydı Başarılı !");
                 }
                 catch (Exception hata)
@@ -103,6 +83,10 @@ namespace VeriTabanıProje
 
         private void yenimüsteri_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'fabrikavtDataSet1.Adres' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.adresTableAdapter.Fill(this.fabrikavtDataSet1.Adres);
+            // TODO: Bu kod satırı 'fabrikavtDataSet.Musteri' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.musteriTableAdapter.Fill(this.fabrikavtDataSet.Musteri);
 
         }
 
@@ -157,8 +141,9 @@ namespace VeriTabanıProje
                 {
                     if (baglanti.State == ConnectionState.Closed)
                         baglanti.Open();
-                    string kayit = "insert into Adress(il,ilce,mahalle,sokak,no,daire) values (@il,@ilce,@mahalle,@sokak,@no,@daire)";
-                    SqlCommand komut = new SqlCommand(kayit, baglanti);                 
+                    string kayit = "insert into Adres(adres_id,il,ilce,mahalle,sokak,no,daire) values (@adres_id,@il,@ilce,@mahalle,@sokak,@no,@daire)";
+                    SqlCommand komut = new SqlCommand(kayit, baglanti);
+                    komut.Parameters.AddWithValue("@adres_id", adresid.Text);
                     komut.Parameters.AddWithValue("@il", il.Text);
                     komut.Parameters.AddWithValue("@ilce", ilce.Text);
                     komut.Parameters.AddWithValue("@mahalle", mahalle.Text);                 
@@ -181,6 +166,11 @@ namespace VeriTabanıProje
             kmc kmc = new kmc();
             kmc.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
