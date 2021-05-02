@@ -72,6 +72,7 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -318,7 +319,7 @@
             // 
             // textAra
             // 
-            this.textAra.Location = new System.Drawing.Point(840, 9);
+            this.textAra.Location = new System.Drawing.Point(605, 15);
             this.textAra.Name = "textAra";
             this.textAra.Size = new System.Drawing.Size(100, 20);
             this.textAra.TabIndex = 27;
@@ -328,7 +329,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(808, 12);
+            this.label14.Location = new System.Drawing.Point(573, 18);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(26, 13);
             this.label14.TabIndex = 28;
@@ -494,12 +495,25 @@
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
+            // btnGeri
+            // 
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGeri.Location = new System.Drawing.Point(957, 4);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(33, 24);
+            this.btnGeri.TabIndex = 45;
+            this.btnGeri.Text = "X";
+            this.btnGeri.UseVisualStyleBackColor = true;
+            // 
             // ikPersonelislem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(952, 517);
+            this.ClientSize = new System.Drawing.Size(993, 517);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -602,5 +616,6 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnGeri;
     }
 }
