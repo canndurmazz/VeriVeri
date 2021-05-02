@@ -345,5 +345,12 @@ namespace VeriTabanıProje
         {
             Temizle();
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ikMenu geri = new ikMenu();
+            geri.Show();
+        }
     }
 }

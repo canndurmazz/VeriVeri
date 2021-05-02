@@ -319,7 +319,7 @@
             // 
             // textAra
             // 
-            this.textAra.Location = new System.Drawing.Point(605, 15);
+            this.textAra.Location = new System.Drawing.Point(840, 15);
             this.textAra.Name = "textAra";
             this.textAra.Size = new System.Drawing.Size(100, 20);
             this.textAra.TabIndex = 27;
@@ -329,7 +329,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(573, 18);
+            this.label14.Location = new System.Drawing.Point(808, 18);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(26, 13);
             this.label14.TabIndex = 28;
@@ -506,6 +506,7 @@
             this.btnGeri.TabIndex = 45;
             this.btnGeri.Text = "X";
             this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // ikPersonelislem
             // 

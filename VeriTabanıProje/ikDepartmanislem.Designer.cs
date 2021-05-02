@@ -227,6 +227,7 @@
             this.btnGeri.TabIndex = 16;
             this.btnGeri.Text = "X";
             this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // ikDepartmanislem
             // 
