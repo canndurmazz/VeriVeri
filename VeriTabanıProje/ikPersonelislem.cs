@@ -188,15 +188,25 @@ namespace VeriTabanıProje
         private void btnEkle_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(textId.Text) || string.IsNullOrEmpty(comboBox1.Text) || string.IsNullOrEmpty(textAdres.Text))
+            if (string.IsNullOrEmpty(comboBox1.Text))
             {
-                MessageBox.Show("ID, Departman ve Adres belirtilmelidir. Boş alan bırakmayınız!");
+                MessageBox.Show("Departman belirtilmelidir. Boş alan bırakmayınız!");
             }
             else
             {
                 try
-                {
+                { 
                     baglanti.Open();
+                    string sorgu4 = "select top 1 personel_id from personel order by personel_id desc";
+                    SqlCommand cmd3 = new SqlCommand(sorgu4, baglanti);
+                    int pid=1;
+                    if(cmd3.ExecuteScalar()!=null)
+                    {
+                        pid = Convert.ToInt32(cmd3.ExecuteScalar());
+                        pid = pid + 1;
+                    }
+                    
+                    
                     string sorgu1 = "select departman_id from departman where departman_ad=@dep";
                     SqlCommand cmd = new SqlCommand(sorgu1, baglanti);
                     cmd.Parameters.AddWithValue("@dep", comboBox1.Text);
@@ -222,7 +232,7 @@ namespace VeriTabanıProje
 
                     string sorgu = "insert into personel values(@id,@ad,@soyad,@tel,@mail,@cinsiyet,@dt,@tc,@gt,@maas,@adres,@dep)";
                     komut = new SqlCommand(sorgu, baglanti);
-                    komut.Parameters.AddWithValue("@id", textId.Text);
+                    komut.Parameters.AddWithValue("@id", pid);
                     komut.Parameters.AddWithValue("@ad", textAd.Text);
                     komut.Parameters.AddWithValue("@soyad", textSoyad.Text);
                     komut.Parameters.AddWithValue("@tel", textTel.Text);
@@ -231,7 +241,7 @@ namespace VeriTabanıProje
                     komut.Parameters.AddWithValue("@dt", Convert.ToDateTime(dateTimePickerDT.Text));
                     komut.Parameters.AddWithValue("@tc", textTC.Text);
                     komut.Parameters.AddWithValue("@gt", Convert.ToDateTime(dateTimePickerGT.Text));
-                    komut.Parameters.AddWithValue("@maas", textMaas.Text);
+                    komut.Parameters.AddWithValue("@maas",Convert.ToDouble(textMaas.Text));
                     komut.Parameters.AddWithValue("@adres", adres);
                     komut.Parameters.AddWithValue("@dep", a);
                     komut.ExecuteNonQuery();
@@ -295,20 +305,35 @@ namespace VeriTabanıProje
         {
             if (string.IsNullOrEmpty(textId.Text) == false)
             {
-                try
+                
+                baglanti.Open();
+                string sorgu1 = "select yonetici_id from departman where yonetici_id in(select personel_id from personel where personel_id=@p_id )";
+                SqlCommand cmd = new SqlCommand(sorgu1, baglanti);
+                cmd.Parameters.AddWithValue("@p_id", textId.Text);
+                if(cmd.ExecuteScalar()!=null)
                 {
-                    string sorgu = "delete from personel where personel_id=@id";
-                    komut = new SqlCommand(sorgu, baglanti);
-                    komut.Parameters.AddWithValue("@id", Convert.ToInt32(textId.Text));
-                    baglanti.Open();
-                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Bu kişi aktif bir yönetici olduğu için silemezsiniz!");
                     baglanti.Close();
-                    PersonelGetir();
                 }
-                catch (Exception excep)
+                else
                 {
-                    MessageBox.Show(excep.Message);
-                }
+                    baglanti.Close();
+                    try
+                    {
+                        string sorgu = "delete from personel where personel_id=@id";
+                        komut = new SqlCommand(sorgu, baglanti);
+                        komut.Parameters.AddWithValue("@id", Convert.ToInt32(textId.Text));
+                        baglanti.Open();
+                        komut.ExecuteNonQuery();
+                        baglanti.Close();
+                        PersonelGetir();
+                    }
+                    catch (Exception excep)
+                    {
+                        MessageBox.Show(excep.Message);
+                    }
+                }   
+                
             }
             else
             {

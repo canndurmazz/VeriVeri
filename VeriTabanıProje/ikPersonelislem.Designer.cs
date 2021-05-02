@@ -197,6 +197,7 @@
             // 
             // textId
             // 
+            this.textId.Enabled = false;
             this.textId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textId.Location = new System.Drawing.Point(96, 34);
             this.textId.Name = "textId";
@@ -279,6 +280,9 @@
             // 
             this.combocinsiyet.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.combocinsiyet.FormattingEnabled = true;
+            this.combocinsiyet.Items.AddRange(new object[] {
+            "Kadın",
+            "Erkek"});
             this.combocinsiyet.Location = new System.Drawing.Point(96, 164);
             this.combocinsiyet.Name = "combocinsiyet";
             this.combocinsiyet.Size = new System.Drawing.Size(100, 21);
