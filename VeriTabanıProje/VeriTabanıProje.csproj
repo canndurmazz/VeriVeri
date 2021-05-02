@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="finansGelirGider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finansGelirGider.Designer.cs">
+      <DependentUpon>finansGelirGider.cs</DependentUpon>
+    </Compile>
     <Compile Include="ikDepartmanislem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ceosifre.resx">
       <DependentUpon>ceosifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finansGelirGider.resx">
+      <DependentUpon>finansGelirGider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ikDepartmanislem.resx">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>
