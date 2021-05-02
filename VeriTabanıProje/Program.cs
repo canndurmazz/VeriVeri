@@ -16,7 +16,7 @@ namespace VeriTabanıProje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ikPersonelislem());//kmc
+            Application.Run(new ikDepartmanislem());//kmc
         }
     }
 }
