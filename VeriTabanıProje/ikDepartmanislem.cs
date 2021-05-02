@@ -73,37 +73,50 @@ namespace VeriTabanıProje
                 MessageBox.Show(excep.Message);
             }
         }
+        void Temizle()
+        {
+            textDepid.Text = null;
+            textYonetici.Text = null;
+            textDepad.Text = null;
+        }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrEmpty(textYonetici.Text))
             {
-               
-               baglanti.Open();
-               string sorgu4 = "select top 1 departman_id from departman order by departman_id desc";
-               SqlCommand cmd3 = new SqlCommand(sorgu4, baglanti);
-               int did = 1;
-               if (cmd3.ExecuteScalar() != null)
-               {
-                    did = Convert.ToInt32(cmd3.ExecuteScalar());
-                    did = did + 1;
-               }
-
-                string sorgu = "insert into departman values(@departman_id,@departman_ad,@yonetici_id)";
-                komut = new SqlCommand(sorgu, baglanti);
-                komut.Parameters.AddWithValue("@departman_id", did);
-                komut.Parameters.AddWithValue("@departman_ad", textDepad.Text);
-                komut.Parameters.AddWithValue("@yonetici_id", textYonetici.Text);
-                //baglanti.Open();
-                komut.ExecuteNonQuery();
-                Getir();
+                MessageBox.Show("Lütfen Departmanı yönetecek kişiyi seçiniz");
             }
-            catch (Exception excep)
+            else
             {
-                MessageBox.Show(excep.Message);
+                try
+                {
+
+                    baglanti.Open();
+                    string sorgu4 = "select top 1 departman_id from departman order by departman_id desc";
+                    SqlCommand cmd3 = new SqlCommand(sorgu4, baglanti);
+                    int did = 1;
+                    if (cmd3.ExecuteScalar() != null)
+                    {
+                        did = Convert.ToInt32(cmd3.ExecuteScalar());
+                        did = did + 1;
+                    }
+
+                    string sorgu = "insert into departman values(@departman_id,@departman_ad,@yonetici_id)";
+                    komut = new SqlCommand(sorgu, baglanti);
+                    komut.Parameters.AddWithValue("@departman_id", did);
+                    komut.Parameters.AddWithValue("@departman_ad", textDepad.Text);
+                    komut.Parameters.AddWithValue("@yonetici_id", textYonetici.Text);
+                    //baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    Getir();
+                }
+                catch (Exception excep)
+                {
+                    MessageBox.Show(excep.Message);
+                    baglanti.Close();
+                }
                 baglanti.Close();
             }
-            baglanti.Close();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -172,6 +185,11 @@ namespace VeriTabanıProje
         private void textAra_TextChanged(object sender, EventArgs e)
         {
             Ara("Select personel_id as 'Personel id',personel_ad as 'Personel ad',personel_soyad 'Personel soyad' from personel where personel_ad like'" + textAra.Text + "%'");
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
         }
     }
 }
