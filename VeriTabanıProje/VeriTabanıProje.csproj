@@ -63,11 +63,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ikPersonelislem.cs">
+    <Compile Include="..\..\..\..\..\Desktop\ikPersonelislem.cs">
       <SubType>Form</SubType>
+      <Link>ikPersonelislem.cs</Link>
     </Compile>
-    <Compile Include="ikPersonelislem.Designer.cs">
+    <Compile Include="..\..\..\..\..\Desktop\ikPersonelislem.Designer.cs">
       <DependentUpon>ikPersonelislem.cs</DependentUpon>
+      <Link>ikPersonelislem.Designer.cs</Link>
     </Compile>
     <Compile Include="kmc.cs">
       <SubType>Form</SubType>
@@ -155,8 +157,9 @@
     <EmbeddedResource Include="ceosifre.resx">
       <DependentUpon>ceosifre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ikPersonelislem.resx">
+    <EmbeddedResource Include="..\..\..\..\..\Desktop\ikPersonelislem.resx">
       <DependentUpon>ikPersonelislem.cs</DependentUpon>
+      <Link>ikPersonelislem.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="kmc.resx">
       <DependentUpon>kmc.cs</DependentUpon>
