@@ -26,7 +26,7 @@ namespace VeriTabanıProje
             try
             {
                 SqlConnection baglanti = new SqlConnection();
-                baglanti.ConnectionString = "Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI";
+                baglanti.ConnectionString = "Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True";
                 SqlCommand komut = new SqlCommand();
                 komut.CommandText = "SELECT * FROM departman";
                 komut.Connection = baglanti;
@@ -50,7 +50,7 @@ namespace VeriTabanıProje
         {
             try
             {
-                baglanti = new SqlConnection("server =USER11\\SQLEXPRESS; Initial Catalog = fabrikavt; Integrated Security = SSPI");
+                baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True");
                 baglanti.Open();
                 /*use fabrikavt;
                 Select personel_id as ID,personel_ad as AD,personel_soyad as Soyad,personel_tel as TEL, personel_mail as Mail,
@@ -312,7 +312,7 @@ namespace VeriTabanıProje
                 cmd.Parameters.AddWithValue("@p_id", textId.Text);
                 if(cmd.ExecuteScalar()!=null)
                 {
-                    MessageBox.Show("Bu kişi aktif bir yönetici olduğu için silemezsiniz!");
+                    MessageBox.Show("Bu kişi aktif bir yönetici olduğu için silemezsiniz! Lütfen önce yeni yönetici atayınız");
                     baglanti.Close();
                 }
                 else
@@ -320,12 +320,21 @@ namespace VeriTabanıProje
                     baglanti.Close();
                     try
                     {
+                        string sorgu2 = "delete from kullanicilar where kullanici_id=@id";
+                        komut = new SqlCommand(sorgu2, baglanti);
+                        komut.Parameters.AddWithValue("@id", Convert.ToInt32(textId.Text));
+                        baglanti.Open();
+                        komut.ExecuteNonQuery();
+                        baglanti.Close();
+
                         string sorgu = "delete from personel where personel_id=@id";
                         komut = new SqlCommand(sorgu, baglanti);
                         komut.Parameters.AddWithValue("@id", Convert.ToInt32(textId.Text));
                         baglanti.Open();
                         komut.ExecuteNonQuery();
                         baglanti.Close();
+
+                        
                         PersonelGetir();
                     }
                     catch (Exception excep)

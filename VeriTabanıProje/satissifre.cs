@@ -16,7 +16,10 @@ namespace VeriTabanıProje
 {
     public partial class satissifre : Form
     {
-        SqlConnection baglanti = new SqlConnection("Data Source=CANPC\\SQLEXPRESS;Initial Catalog=fabrikadb;Integrated Security=True");
+       // SqlConnection baglanti;
+        SqlCommand komut;
+        SqlDataAdapter da;
+
         public satissifre()
         {
             InitializeComponent();
@@ -24,6 +27,7 @@ namespace VeriTabanıProje
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             if (baglanti.State == ConnectionState.Open)
             {
                 baglanti.Close();
@@ -75,8 +79,62 @@ namespace VeriTabanıProje
                 {
                     baglanti.Close();
                 }
+
+            }*/
+            /*
+            SqlConnection baglanti = new SqlConnection();
+            baglanti.ConnectionString = "Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI";
+            baglanti.Open();
+            string sorgu = "Select kullanici_ad from kullanicilar where yetki_id=(select yetki_id from yetki where yetki_ad='Personel') and kullanici_id in (select personel_id from personel where departman_id=(select departman_id from departman where departman_ad='Satış'))";
+            SqlCommand komut = new SqlCommand(sorgu, baglanti);
+            string a = Convert.ToString(komut.ExecuteScalar());
+
+            string sorgu2 = "Select kullanici_sifre from kullanicilar where yetki_id=(select yetki_id from yetki where yetki_ad='Personel') and kullanici_id in (select personel_id from personel where departman_id=(select departman_id from departman where departman_ad='Satış'))";
+            SqlCommand komut2 = new SqlCommand(sorgu2, baglanti);
+            string b = Convert.ToString(komut.ExecuteScalar());
+
+            if (kullaniciAd.Text==a||kullaniciSifre.Text==b)
+            {
+                MessageBox.Show("Giriş başarılı");
             }
-           
+            else
+            {
+                MessageBox.Show("Giriş başarısız");
+            }
+
+            baglanti.Close();*/
+            try
+            { 
+
+                SqlConnection baglanti = new SqlConnection();
+                
+                baglanti.ConnectionString = "Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True" ;
+                baglanti.Open();
+                SqlCommand al = new SqlCommand("Select kullanici_ad,kullanici_sifre from kullanicilar where yetki_id=(select yetki_id from yetki where yetki_ad='Personel') and kullanici_id in (select personel_id from personel where departman_id=(select departman_id from departman where departman_ad='Satış'))",baglanti);
+                SqlDataReader oku = al.ExecuteReader();
+                if (!oku.HasRows)
+                {
+                    oku.Close();
+                    baglanti.Close();
+                }
+                else
+                {
+                    while (oku.Read())
+                    {
+                        string a = (oku["kullanici_ad"].ToString()).ToString();
+                        string b = (oku["kullanici_sifre"].ToString()).ToString();
+                        if (kullaniciAd.Text == a || kullaniciSifre.Text == b)
+                        {
+                            MessageBox.Show("Giriş başarılı");
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,6 +161,11 @@ namespace VeriTabanıProje
             satisyoneticisifre satisyoneticisifre = new satisyoneticisifre();
             satisyoneticisifre.Show();
             this.Hide();
+        }
+
+        private void satissifre_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
