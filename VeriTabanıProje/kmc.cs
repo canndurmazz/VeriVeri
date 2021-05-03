@@ -61,9 +61,9 @@ namespace VeriTabanıProje
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ceosifre ceosifre = new ceosifre();
-            ceosifre.Show();
+            iksifre ikgit = new iksifre();
             this.Hide();
+            ikgit.Show();
          
 
         }

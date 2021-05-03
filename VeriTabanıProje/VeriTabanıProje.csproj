@@ -75,6 +75,12 @@
     <Compile Include="ikDepartmanislem.Designer.cs">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>
     </Compile>
+    <Compile Include="ikgirisyonetici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikgirisyonetici.Designer.cs">
+      <DependentUpon>ikgirisyonetici.cs</DependentUpon>
+    </Compile>
     <Compile Include="ikMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,12 @@
     </Compile>
     <Compile Include="ikPersonelislem.Designer.cs">
       <DependentUpon>ikPersonelislem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iksifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iksifre.Designer.cs">
+      <DependentUpon>iksifre.cs</DependentUpon>
     </Compile>
     <Compile Include="kmc.cs">
       <SubType>Form</SubType>
@@ -179,11 +191,17 @@
     <EmbeddedResource Include="ikDepartmanislem.resx">
       <DependentUpon>ikDepartmanislem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ikgirisyonetici.resx">
+      <DependentUpon>ikgirisyonetici.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ikMenu.resx">
       <DependentUpon>ikMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ikPersonelislem.resx">
       <DependentUpon>ikPersonelislem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iksifre.resx">
+      <DependentUpon>iksifre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kmc.resx">
       <DependentUpon>kmc.cs</DependentUpon>
