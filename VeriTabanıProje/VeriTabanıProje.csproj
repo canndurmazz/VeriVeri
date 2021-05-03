@@ -99,6 +99,12 @@
     <Compile Include="iksifre.Designer.cs">
       <DependentUpon>iksifre.cs</DependentUpon>
     </Compile>
+    <Compile Include="ikyoneticimenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikyoneticimenu.Designer.cs">
+      <DependentUpon>ikyoneticimenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="kmc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="iksifre.resx">
       <DependentUpon>iksifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ikyoneticimenu.resx">
+      <DependentUpon>ikyoneticimenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kmc.resx">
       <DependentUpon>kmc.cs</DependentUpon>

@@ -41,7 +41,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(187, 22);
+            this.label4.Location = new System.Drawing.Point(167, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 13);
@@ -53,7 +53,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(204, 22);
+            this.label3.Location = new System.Drawing.Point(184, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 13);
@@ -65,7 +65,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(139, 101);
+            this.button1.Location = new System.Drawing.Point(119, 95);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 24);
@@ -77,7 +77,7 @@
             // kullaniciSifre
             // 
             this.kullaniciSifre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.kullaniciSifre.Location = new System.Drawing.Point(107, 65);
+            this.kullaniciSifre.Location = new System.Drawing.Point(87, 59);
             this.kullaniciSifre.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciSifre.Name = "kullaniciSifre";
             this.kullaniciSifre.Size = new System.Drawing.Size(110, 20);
@@ -86,7 +86,7 @@
             // kullaniciAd
             // 
             this.kullaniciAd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.kullaniciAd.Location = new System.Drawing.Point(107, 38);
+            this.kullaniciAd.Location = new System.Drawing.Point(87, 32);
             this.kullaniciAd.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciAd.Name = "kullaniciAd";
             this.kullaniciAd.Size = new System.Drawing.Size(110, 20);
@@ -96,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(50, 68);
+            this.label2.Location = new System.Drawing.Point(30, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
@@ -107,7 +107,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(62, 42);
+            this.label1.Location = new System.Drawing.Point(42, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(279, 153);
+            this.ClientSize = new System.Drawing.Size(235, 141);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);

@@ -71,7 +71,7 @@ namespace VeriTabanıProje
                             if (kullaniciAd.Text == a && kullaniciSifre.Text == b)
                             {
                                 sayac = sayac + 1;
-                                ikMenu menu = new ikMenu();
+                                ikyoneticimenu menu = new ikyoneticimenu();
                                 this.Hide();
                                 menu.Show();
                             }

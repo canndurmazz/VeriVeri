@@ -125,7 +125,10 @@ namespace VeriTabanıProje
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            baglanti.Close();
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
             baglanti.Open();
             textId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textAd.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -187,6 +190,10 @@ namespace VeriTabanıProje
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
 
             if (string.IsNullOrEmpty(comboBox1.Text))
             {
@@ -257,6 +264,10 @@ namespace VeriTabanıProje
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
             try
             {
                 baglanti.Open();
@@ -303,6 +314,10 @@ namespace VeriTabanıProje
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
             if (string.IsNullOrEmpty(textId.Text) == false)
             {
                 
