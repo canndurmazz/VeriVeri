@@ -16,6 +16,7 @@ namespace VeriTabanıProje
     {
         SqlConnection baglanti;
         SqlCommand komut;
+        SqlCommand komut3;
         SqlDataAdapter da;
         SqlDataAdapter da2;
         public kullaniciekle()
@@ -92,24 +93,168 @@ namespace VeriTabanıProje
             comboBox1.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
         }
 
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            textId.Text = null;
+            textkAd.Text = null;
+            textkSifre.Text = null;
+            comboBox1.Text = null;
+        }
+
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
+            if (string.IsNullOrEmpty(textId.Text))
+            {
+                MessageBox.Show("Lütfen Kişiyi seçiniz seçiniz");
+            }
+            else
+            {
+                baglanti.Open();
+                string sorgu = "select kullanici_id from kullanicilar where kullanici_id=@kid";
+                SqlCommand cmd = new SqlCommand(sorgu, baglanti);
+                cmd.Parameters.AddWithValue("@kid", textId.Text);
+                string perid = Convert.ToString(cmd.ExecuteScalar());
 
+                if (perid == textId.Text)
+                {
+                    MessageBox.Show("Bu kişi zaten bir şifreye sahip!");
+                }
+
+                else
+                {
+                    try
+                    {
+                        string sorgu3 = "select yetki_id from yetki where yetki_ad=@yad";
+                        SqlCommand cmd3 = new SqlCommand(sorgu3, baglanti);
+                        cmd3.Parameters.AddWithValue("@yad", comboBox1.Text);
+                        string yetki = Convert.ToString(cmd3.ExecuteScalar());
+
+
+                        string sorgu2 = "insert into kullanicilar values(@kulid,@kulad,@kulsifre,@yetki)";
+                        komut = new SqlCommand(sorgu2, baglanti);
+                        komut.Parameters.AddWithValue("@kulid", textId.Text);
+                        komut.Parameters.AddWithValue("@kulad", textkAd.Text);
+                        komut.Parameters.AddWithValue("@kulsifre", textkSifre.Text);
+                        komut.Parameters.AddWithValue("@yetki",Convert.ToInt32(yetki));
+                        komut.ExecuteNonQuery();
+                        PersonelGetir();
+                    }
+                    catch (Exception excep)
+                    {
+                        MessageBox.Show(excep.Message);
+                        baglanti.Close();
+                    }
+                }
+                baglanti.Close();
+            }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
+            if (string.IsNullOrEmpty(textId.Text))
+            {
+                MessageBox.Show("ID belirtiniz.");
+            }
+            else
+            {
+                try
+                {
+                    string sorgu = "delete from kullanicilar where kullanici_id=@kid";
+                    komut = new SqlCommand(sorgu, baglanti);
+                    komut.Parameters.AddWithValue("@kid", Convert.ToInt32(textId.Text));
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    baglanti.Close();
+                    PersonelGetir();
+                }
+                catch (Exception excep)
+                {
+                    MessageBox.Show(excep.Message);
+                }
+            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
+            if (string.IsNullOrEmpty(textId.Text) || string.IsNullOrEmpty(textkAd.Text) || string.IsNullOrEmpty(textkSifre.Text) || string.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                MessageBox.Show("Boş alan bırakılamaz");
+            }
+            else
+            {
+                try
+                {
+                    baglanti.Open();
 
+                    string sorgu3 = "select yetki_id from yetki where yetki_ad=@yad";
+                    SqlCommand cmd3 = new SqlCommand(sorgu3, baglanti);
+                    cmd3.Parameters.AddWithValue("@yad", comboBox1.Text);
+                    string yetki = Convert.ToString(cmd3.ExecuteScalar());
+
+                    string sorgu = "update kullanicilar set kullanici_ad=@kad,kullanici_sifre=@ksif,yetki_id=@yetki where kullanici_id=@kid";
+                    komut = new SqlCommand(sorgu, baglanti);
+                    komut.Parameters.AddWithValue("@kid", Convert.ToInt32(textId.Text));
+                    komut.Parameters.AddWithValue("@kad", textkAd.Text);
+                    komut.Parameters.AddWithValue("@ksif", textkSifre.Text);
+                    komut.Parameters.AddWithValue("@yetki",Convert.ToInt32(yetki));
+                    komut.ExecuteNonQuery();
+                    baglanti.Close();
+                    PersonelGetir();
+                }
+                catch (Exception excep)
+                {
+                    MessageBox.Show(excep.Message);
+                }
+            }
         }
 
-        private void btnTemizle_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            if (baglanti.State == ConnectionState.Open)
+            {
+                baglanti.Close();
+            }
+            try
+            {
+                baglanti.Open();
 
+                string sorgu = "update kullanicilar set yetki_id=1";
+                komut3 = new SqlCommand(sorgu, baglanti);
+                komut3.ExecuteNonQuery();
+
+                SqlCommand komut = new SqlCommand();
+                komut.CommandText = "SELECT * FROM departman";
+                komut.Connection = baglanti;
+                komut.CommandType = CommandType.Text;
+
+                SqlDataReader dr;
+                dr = komut.ExecuteReader();
+                while (dr.Read())
+                {
+                    string sorgu4 = "update kullanicilar set yetki_id=2 where kullanici_id=@kid";
+                    SqlCommand cmd4 = new SqlCommand(sorgu4, baglanti);
+                    cmd4.Parameters.AddWithValue("@kid", dr["yonetici_id"]);
+                    cmd4.ExecuteNonQuery();
+                }
+                baglanti.Close();
+                PersonelGetir();
+            }
+            catch (Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+            }
         }
     }
 }

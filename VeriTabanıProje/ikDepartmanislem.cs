@@ -86,26 +86,58 @@ namespace VeriTabanıProje
             {
                 baglanti.Close();
             }
-            if (string.IsNullOrEmpty(textYonetici.Text))
-            {
-                MessageBox.Show("Lütfen Departmanı yönetecek kişiyi seçiniz");
-            }
 
             else
             {
                 baglanti.Open();
-                string sorgu6 = "select yonetici_id from departman where yonetici_id=@yid";
-                SqlCommand cmd6 = new SqlCommand(sorgu6, baglanti);
-                cmd6.Parameters.AddWithValue("@yid", textYonetici.Text);
-                string perid = Convert.ToString(cmd6.ExecuteScalar());
-
-                if (perid == textYonetici.Text)
+                if (string.IsNullOrEmpty(textYonetici.Text)==false)
                 {
-                    MessageBox.Show("Bu kişi zaten bir departmanı yönetiyor");
+                    
+                    string sorgu6 = "select yonetici_id from departman where yonetici_id=@yid";
+                    SqlCommand cmd6 = new SqlCommand(sorgu6, baglanti);
+                    cmd6.Parameters.AddWithValue("@yid", textYonetici.Text);
+                    string perid = Convert.ToString(cmd6.ExecuteScalar());
+
+                    if (perid == textYonetici.Text)
+                    {
+                        MessageBox.Show("Bu kişi zaten bir departmanı yönetiyor");
+                    }
+
+                    else
+                    {
+                        try
+                        {
+                            string sorgu4 = "select top 1 departman_id from departman order by departman_id desc";
+                            SqlCommand cmd3 = new SqlCommand(sorgu4, baglanti);
+                            int did = 1;
+                            if (cmd3.ExecuteScalar() != null)
+                            {
+                                did = Convert.ToInt32(cmd3.ExecuteScalar());
+                                did = did + 1;
+                            }
+
+                            string sorgu = "insert into departman values(@departman_id,@departman_ad,@yonetici_id)";
+                            komut = new SqlCommand(sorgu, baglanti);
+                            komut.Parameters.AddWithValue("@departman_id", did);
+                            komut.Parameters.AddWithValue("@departman_ad", textDepad.Text);
+                            komut.Parameters.AddWithValue("@yonetici_id", textYonetici.Text);
+
+                            komut.ExecuteNonQuery();
+                            Getir();
+                        }
+                        catch (Exception excep)
+                        {
+                            MessageBox.Show(excep.Message);
+                            baglanti.Close();
+                        }
+                        baglanti.Close();
+                    }
+                    
+
                 }
-                
                 else
                 {
+
                     try
                     {
                         string sorgu4 = "select top 1 departman_id from departman order by departman_id desc";
@@ -117,11 +149,11 @@ namespace VeriTabanıProje
                             did = did + 1;
                         }
 
-                        string sorgu = "insert into departman values(@departman_id,@departman_ad,@yonetici_id)";
+                        string sorgu = "insert into departman(departman_id,departman_ad) values(@departman_id,@departman_ad)";
                         komut = new SqlCommand(sorgu, baglanti);
                         komut.Parameters.AddWithValue("@departman_id", did);
                         komut.Parameters.AddWithValue("@departman_ad", textDepad.Text);
-                        komut.Parameters.AddWithValue("@yonetici_id", textYonetici.Text);
+
                         komut.ExecuteNonQuery();
                         Getir();
                     }
@@ -130,8 +162,10 @@ namespace VeriTabanıProje
                         MessageBox.Show(excep.Message);
                         baglanti.Close();
                     }
+                    baglanti.Close();
                 }
-                baglanti.Close();
+                
+
             }
         }
 

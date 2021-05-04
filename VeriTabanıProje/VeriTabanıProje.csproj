@@ -22,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,11 +59,6 @@
     </Compile>
     <Compile Include="ceosifre.Designer.cs">
       <DependentUpon>ceosifre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fabrikadbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="finansGelirGider.cs">
       <SubType>Form</SubType>
@@ -104,16 +101,6 @@
     </Compile>
     <Compile Include="ikyoneticimenu.Designer.cs">
       <DependentUpon>ikyoneticimenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="istek.cs" />
-    <Compile Include="istek.Designer.cs">
-      <DependentUpon>istek.cs</DependentUpon>
-    </Compile>
-    <Compile Include="isteksoru.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="isteksoru.Designer.cs">
-      <DependentUpon>isteksoru.cs</DependentUpon>
     </Compile>
     <Compile Include="kmc.cs">
       <SubType>Form</SubType>
@@ -234,12 +221,6 @@
     <EmbeddedResource Include="ikyoneticimenu.resx">
       <DependentUpon>ikyoneticimenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="istek.resx">
-      <DependentUpon>istek.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="isteksoru.resx">
-      <DependentUpon>isteksoru.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="kmc.resx">
       <DependentUpon>kmc.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,17 +275,6 @@
     <EmbeddedResource Include="yöneticisifre.resx">
       <DependentUpon>yöneticisifre.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="fabrikadbDataSet.xsc">
-      <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="fabrikadbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>fabrikadbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="fabrikadbDataSet.xss">
-      <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
