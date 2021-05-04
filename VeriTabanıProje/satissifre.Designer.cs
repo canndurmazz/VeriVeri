@@ -31,7 +31,7 @@ namespace VeriTabanıProje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(satissifre));
             this.button1 = new System.Windows.Forms.Button();
-            this.kullaici_sifre = new System.Windows.Forms.TextBox();
+            this.kullanici_sifre = new System.Windows.Forms.TextBox();
             this.kullanici_ad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,13 +52,13 @@ namespace VeriTabanıProje
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // kullaici_sifre
+            // kullanici_sifre
             // 
-            this.kullaici_sifre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.kullaici_sifre.Location = new System.Drawing.Point(76, 59);
-            this.kullaici_sifre.Name = "kullaici_sifre";
-            this.kullaici_sifre.Size = new System.Drawing.Size(146, 22);
-            this.kullaici_sifre.TabIndex = 15;
+            this.kullanici_sifre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.kullanici_sifre.Location = new System.Drawing.Point(76, 59);
+            this.kullanici_sifre.Name = "kullanici_sifre";
+            this.kullanici_sifre.Size = new System.Drawing.Size(146, 22);
+            this.kullanici_sifre.TabIndex = 15;
             // 
             // kullanici_ad
             // 
@@ -128,13 +128,13 @@ namespace VeriTabanıProje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(226, 134);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.kullaici_sifre);
+            this.Controls.Add(this.kullanici_sifre);
             this.Controls.Add(this.kullanici_ad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -148,7 +148,7 @@ namespace VeriTabanıProje
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox kullaici_sifre;
+        private System.Windows.Forms.TextBox kullanici_sifre;
         private System.Windows.Forms.TextBox kullanici_ad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

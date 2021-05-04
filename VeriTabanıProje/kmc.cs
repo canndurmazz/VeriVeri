@@ -35,16 +35,13 @@ namespace VeriTabanıProje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            yenimüsteri yenimüsteri = new yenimüsteri();
-            yenimüsteri.Show();
+            satinsifre satinsifre = new satinsifre();
+            satinsifre.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-            personel personel = new personel();
-            personel.Show();
-            this.Hide();
+        {           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -61,8 +58,8 @@ namespace VeriTabanıProje
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ceosifre ceosifre = new ceosifre();
-            ceosifre.Show();
+            iksifre iksifre = new iksifre();
+            iksifre.Show();
             this.Hide();
          
 
@@ -70,9 +67,7 @@ namespace VeriTabanıProje
 
         private void button6_Click(object sender, EventArgs e)
         {
-            destek destek = new destek();
-            destek.Show();
-            this.Hide();
+           
         
         }
 
@@ -135,6 +130,11 @@ namespace VeriTabanıProje
             hakkımızda hakkımızda = new hakkımızda();
             hakkımızda.Show();
             this.Hide();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

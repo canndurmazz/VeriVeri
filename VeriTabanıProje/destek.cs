@@ -64,5 +64,12 @@ namespace VeriTabanıProje
                 }
             }
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            kmc kmc = new kmc();
+            kmc.Show();
+            this.Hide();
+        }
     }
 }

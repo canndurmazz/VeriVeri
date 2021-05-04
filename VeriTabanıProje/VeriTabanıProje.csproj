@@ -46,18 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ceo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ceo.Designer.cs">
-      <DependentUpon>ceo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ceosifre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ceosifre.Designer.cs">
-      <DependentUpon>ceosifre.cs</DependentUpon>
-    </Compile>
     <Compile Include="fabrikadbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +60,170 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>fabrikavtDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikavtDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikavtDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ikDepartmanislem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikDepartmanislem.Designer.cs">
+      <DependentUpon>ikDepartmanislem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ikmesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikmesaj.Designer.cs">
+      <DependentUpon>ikmesaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ikgirisyonetici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikgirisyonetici.Designer.cs">
+      <DependentUpon>ikgirisyonetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ikMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikMenu.Designer.cs">
+      <DependentUpon>ikMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ikPersonelislem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikPersonelislem.Designer.cs">
+      <DependentUpon>ikPersonelislem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iksifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iksifre.Designer.cs">
+      <DependentUpon>iksifre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ikyoneticimenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikyoneticimenu.Designer.cs">
+      <DependentUpon>ikyoneticimenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="istek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="istek.Designer.cs">
+      <DependentUpon>istek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="isteksoru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="isteksoru.Designer.cs">
+      <DependentUpon>isteksoru.cs</DependentUpon>
     </Compile>
     <Compile Include="kmc.cs">
       <SubType>Form</SubType>
@@ -90,6 +242,54 @@
     </Compile>
     <Compile Include="hakkımızda.Designer.cs">
       <DependentUpon>hakkımızda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullaniciekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullaniciekle.Designer.cs">
+      <DependentUpon>kullaniciekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satinalma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satinalma.Designer.cs">
+      <DependentUpon>satinalma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satinmesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satinmesaj.Designer.cs">
+      <DependentUpon>satinmesaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satinsecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satinsecim.Designer.cs">
+      <DependentUpon>satinsecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satinsifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satinsifre.Designer.cs">
+      <DependentUpon>satinsifre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satinyonetici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satinyonetici.Designer.cs">
+      <DependentUpon>satinyonetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satinyoneticisifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satinyoneticisifre.Designer.cs">
+      <DependentUpon>satinyoneticisifre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satismesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satismesaj.Designer.cs">
+      <DependentUpon>satismesaj.cs</DependentUpon>
     </Compile>
     <Compile Include="satisyoneticisifre.cs">
       <SubType>Form</SubType>
@@ -121,19 +321,13 @@
     <Compile Include="satissifre.Designer.cs">
       <DependentUpon>satissifre.cs</DependentUpon>
     </Compile>
-    <Compile Include="personel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="personel.Designer.cs">
-      <DependentUpon>personel.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="secim.cs">
+    <Compile Include="satışsecim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="secim.Designer.cs">
-      <DependentUpon>secim.cs</DependentUpon>
+    <Compile Include="satışsecim.Designer.cs">
+      <DependentUpon>satışsecim.cs</DependentUpon>
     </Compile>
     <Compile Include="yenimüsteri.cs">
       <SubType>Form</SubType>
@@ -141,23 +335,38 @@
     <Compile Include="yenimüsteri.Designer.cs">
       <DependentUpon>yenimüsteri.cs</DependentUpon>
     </Compile>
-    <Compile Include="yönetici.cs">
+    <Compile Include="yenitedarikci.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="yönetici.Designer.cs">
-      <DependentUpon>yönetici.cs</DependentUpon>
+    <Compile Include="yenitedarikci.Designer.cs">
+      <DependentUpon>yenitedarikci.cs</DependentUpon>
     </Compile>
-    <Compile Include="yöneticisifre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="yöneticisifre.Designer.cs">
-      <DependentUpon>yöneticisifre.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ceo.resx">
-      <DependentUpon>ceo.cs</DependentUpon>
+    <EmbeddedResource Include="ikDepartmanislem.resx">
+      <DependentUpon>ikDepartmanislem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ceosifre.resx">
-      <DependentUpon>ceosifre.cs</DependentUpon>
+    <EmbeddedResource Include="ikgirisyonetici.resx">
+      <DependentUpon>ikgirisyonetici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ikMenu.resx">
+      <DependentUpon>ikMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ikmesaj.resx">
+      <DependentUpon>ikmesaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ikPersonelislem.resx">
+      <DependentUpon>ikPersonelislem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iksifre.resx">
+      <DependentUpon>iksifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ikyoneticimenu.resx">
+      <DependentUpon>ikyoneticimenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="istek.resx">
+      <DependentUpon>istek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="isteksoru.resx">
+      <DependentUpon>isteksoru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kmc.resx">
       <DependentUpon>kmc.cs</DependentUpon>
@@ -167,6 +376,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="hakkımızda.resx">
       <DependentUpon>hakkımızda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullaniciekle.resx">
+      <DependentUpon>kullaniciekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satinalma.resx">
+      <DependentUpon>satinalma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satinmesaj.resx">
+      <DependentUpon>satinmesaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satinsecim.resx">
+      <DependentUpon>satinsecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satinsifre.resx">
+      <DependentUpon>satinsifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satinyonetici.resx">
+      <DependentUpon>satinyonetici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satinyoneticisifre.resx">
+      <DependentUpon>satinyoneticisifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satismesaj.resx">
+      <DependentUpon>satismesaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="satisyoneticisifre.resx">
       <DependentUpon>satisyoneticisifre.cs</DependentUpon>
@@ -183,9 +416,6 @@
     <EmbeddedResource Include="satissifre.resx">
       <DependentUpon>satissifre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="personel.resx">
-      <DependentUpon>personel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -195,17 +425,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="secim.resx">
-      <DependentUpon>secim.cs</DependentUpon>
+    <EmbeddedResource Include="satışsecim.resx">
+      <DependentUpon>satışsecim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yenimüsteri.resx">
       <DependentUpon>yenimüsteri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="yönetici.resx">
-      <DependentUpon>yönetici.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="yöneticisifre.resx">
-      <DependentUpon>yöneticisifre.cs</DependentUpon>
+    <EmbeddedResource Include="yenitedarikci.resx">
+      <DependentUpon>yenitedarikci.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="fabrikadbDataSet.xsc">
       <DependentUpon>fabrikadbDataSet.xsd</DependentUpon>
@@ -239,6 +466,248 @@
     </None>
     <None Include="fabrikavtDataSet1.xss">
       <DependentUpon>fabrikavtDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet10.xsc">
+      <DependentUpon>fabrikavtDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet10.xss">
+      <DependentUpon>fabrikavtDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet11.xsc">
+      <DependentUpon>fabrikavtDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet11.xss">
+      <DependentUpon>fabrikavtDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet12.xsc">
+      <DependentUpon>fabrikavtDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet12.xss">
+      <DependentUpon>fabrikavtDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet13.xsc">
+      <DependentUpon>fabrikavtDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet13.xss">
+      <DependentUpon>fabrikavtDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet14.xsc">
+      <DependentUpon>fabrikavtDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet14.xss">
+      <DependentUpon>fabrikavtDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet15.xsc">
+      <DependentUpon>fabrikavtDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet15.xss">
+      <DependentUpon>fabrikavtDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet16.xsc">
+      <DependentUpon>fabrikavtDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet16.xss">
+      <DependentUpon>fabrikavtDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet17.xsc">
+      <DependentUpon>fabrikavtDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet17.xss">
+      <DependentUpon>fabrikavtDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet18.xsc">
+      <DependentUpon>fabrikavtDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet18.xss">
+      <DependentUpon>fabrikavtDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet19.xsc">
+      <DependentUpon>fabrikavtDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet19.xss">
+      <DependentUpon>fabrikavtDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet2.xsc">
+      <DependentUpon>fabrikavtDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet2.xss">
+      <DependentUpon>fabrikavtDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet20.xsc">
+      <DependentUpon>fabrikavtDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet20.xss">
+      <DependentUpon>fabrikavtDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet21.xsc">
+      <DependentUpon>fabrikavtDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet21.xss">
+      <DependentUpon>fabrikavtDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet22.xsc">
+      <DependentUpon>fabrikavtDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet22.xss">
+      <DependentUpon>fabrikavtDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet23.xsc">
+      <DependentUpon>fabrikavtDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet23.xss">
+      <DependentUpon>fabrikavtDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet3.xsc">
+      <DependentUpon>fabrikavtDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet3.xss">
+      <DependentUpon>fabrikavtDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet4.xsc">
+      <DependentUpon>fabrikavtDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet4.xss">
+      <DependentUpon>fabrikavtDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet5.xsc">
+      <DependentUpon>fabrikavtDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet5.xss">
+      <DependentUpon>fabrikavtDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet6.xsc">
+      <DependentUpon>fabrikavtDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet6.xss">
+      <DependentUpon>fabrikavtDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet7.xsc">
+      <DependentUpon>fabrikavtDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet7.xss">
+      <DependentUpon>fabrikavtDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet8.xsc">
+      <DependentUpon>fabrikavtDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet8.xss">
+      <DependentUpon>fabrikavtDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet9.xsc">
+      <DependentUpon>fabrikavtDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="fabrikavtDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabrikavtDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabrikavtDataSet9.xss">
+      <DependentUpon>fabrikavtDataSet9.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

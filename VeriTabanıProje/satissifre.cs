@@ -29,7 +29,7 @@ namespace VeriTabanıProje
                 baglanti.Close();
             }
             baglanti.Open();
-            if (string.IsNullOrEmpty(kullanici_ad.Text) == true || string.IsNullOrEmpty(kullaici_sifre.Text) == true)
+            if (string.IsNullOrEmpty(kullanici_ad.Text) == true || string.IsNullOrEmpty(kullanici_sifre.Text) == true)
             {
                 MessageBox.Show("Bu Alanlar Boş Bırakılamaz", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -37,9 +37,9 @@ namespace VeriTabanıProje
             {
                 try
                 {
-                    SqlCommand al = new SqlCommand("select * from Kullanicilar where kullanici_ad=@kullanici_ad and kullaici_sifre=@kullaici_sifre", baglanti);
+                    SqlCommand al = new SqlCommand("select * from Kullanicilar where kullanici_ad=@kullanici_ad and kullanici_sifre=@kullanici_sifre", baglanti);
                     al.Parameters.Add("@kullanici_ad", SqlDbType.VarChar, 50).Value = kullanici_ad.Text;
-                    al.Parameters.Add("@kullaici_sifre", SqlDbType.VarChar, 50).Value = kullaici_sifre.Text;
+                    al.Parameters.Add("@kullanici_sifre", SqlDbType.VarChar, 50).Value = kullanici_sifre.Text;
 
                     SqlDataReader oku = al.ExecuteReader();
                     if (!oku.HasRows)
@@ -53,10 +53,10 @@ namespace VeriTabanıProje
                         while (oku.Read())
                         {
                             string ad = (oku["kullanici_ad"].ToString());
-                            string sifre = (oku["kullaici_sifre"].ToString());
-                            if (ad == kullanici_ad.Text || sifre == kullaici_sifre.Text)
+                            string sifre = (oku["kullanici_sifre"].ToString());
+                            if (ad == kullanici_ad.Text && sifre == kullanici_sifre.Text)
                             {
-                                secim secim = new secim();
+                                satışsecim secim = new satışsecim();
                                 secim.Show();
                                 this.Hide();
                             }

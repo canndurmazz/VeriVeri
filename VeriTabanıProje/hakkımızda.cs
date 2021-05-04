@@ -33,5 +33,12 @@ namespace VeriTabanıProje
             Application.Exit();
             this.Close();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            kmc kmc = new kmc();
+            kmc.Show();
+            this.Hide();
+        }
     }
 }
