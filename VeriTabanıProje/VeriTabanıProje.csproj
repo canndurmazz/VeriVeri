@@ -139,6 +139,12 @@
     <Compile Include="kullaniciekle.Designer.cs">
       <DependentUpon>kullaniciekle.cs</DependentUpon>
     </Compile>
+    <Compile Include="kullanicisifreekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanicisifreekle.Designer.cs">
+      <DependentUpon>kullanicisifreekle.cs</DependentUpon>
+    </Compile>
     <Compile Include="satisyoneticisifre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="kullaniciekle.resx">
       <DependentUpon>kullaniciekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicisifreekle.resx">
+      <DependentUpon>kullanicisifreekle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="satisyoneticisifre.resx">
       <DependentUpon>satisyoneticisifre.cs</DependentUpon>
