@@ -91,5 +91,25 @@ namespace VeriTabanıProje
             textkSifre.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
             comboBox1.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
