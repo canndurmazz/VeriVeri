@@ -29,14 +29,13 @@ namespace VeriTabanıProje
             {
                 baglanti = new SqlConnection("Data Source=USER11\\SQLEXPRESS;Initial Catalog=fabrikavt;Integrated Security=SSPI;MultipleActiveResultSets=True");
                 baglanti.Open();     
-                da = new SqlDataAdapter("Select personel_id as ID,personel_ad as AD,personel_soyad as Soyad,personel_tel as TEL, personel_mail as Mail," +
-                    "personel_cinsiyet as Cinsiyet,personel_dogumTarihi as 'Doğum Tarihi',personel_tc as TC," +
-                    "personel_girisTarihi as 'Giriş Tarih',personel_maas as Maaş,adres_id as Adres , departman.departman_ad from personel inner join departman on departman.departman_id=personel.departman_id ", baglanti);
+                da = new SqlDataAdapter("Select personel_id as ID,personel_ad as Ad,personel_soyad as Soyad, departman.departman_ad as 'Departman' ,personel_tel as TEL, personel_mail as Mail," +
+                    "personel_cinsiyet as Cinsiyet from personel inner join departman on departman.departman_id=personel.departman_id ", baglanti);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
                 dataGridView1.DataSource = tablo;
 
-                da2 = new SqlDataAdapter("Select kullanici_id,kullanici_ad,kullanici_sifre, yetki.yetki_ad from kullanicilar inner join yetki on kullanicilar.yetki_id=yetki.yetki_id",baglanti);
+                da2 = new SqlDataAdapter("Select kullanici_id,kullanici_ad,kullanici_sifre, yetki.yetki_ad,personel.departman_id from kullanicilar inner join yetki on kullanicilar.yetki_id=yetki.yetki_id inner join personel on kullanicilar.kullanici_id=personel.personel_id",baglanti);
                 DataTable tablo2 = new DataTable();
                 da2.Fill(tablo2);
                 dataGridView2.DataSource = tablo2;
@@ -248,6 +247,22 @@ namespace VeriTabanıProje
                     cmd4.Parameters.AddWithValue("@kid", dr["yonetici_id"]);
                     cmd4.ExecuteNonQuery();
                 }
+
+                SqlCommand komut2 = new SqlCommand();
+                komut2.CommandText = "SELECT * FROM personel where departman_id in(select departman_id from departman where departman_ad='Bilgi İşlem')";
+                komut2.Connection = baglanti;
+                komut2.CommandType = CommandType.Text;
+
+                SqlDataReader dr2;
+                dr2 = komut2.ExecuteReader();
+                while (dr2.Read())
+                {
+                    string sorgu4 = "update kullanicilar set yetki_id=3 where kullanici_id=@perid";
+                    SqlCommand cmd4 = new SqlCommand(sorgu4, baglanti);
+                    cmd4.Parameters.AddWithValue("@perid", dr2["personel_id"]);
+                    cmd4.ExecuteNonQuery();
+                }
+
                 baglanti.Close();
                 PersonelGetir();
             }
